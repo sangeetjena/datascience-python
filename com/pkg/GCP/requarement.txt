@@ -1,0 +1,6 @@
+google-cloud-storage==1.24.1
+ googleapis_common_protos
+ oauth2client.client
+ gcloud
+ pip install --upgrade google-cloud-storage
+ pip install --upgrade google-cloud-bigquery
