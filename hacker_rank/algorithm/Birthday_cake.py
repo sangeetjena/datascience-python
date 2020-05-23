@@ -21,6 +21,17 @@ Output Format
 Return the number of candles that can be blown out on a new line"""
 
 num_arr = int(input())
-arr  = str(input())
+arr  = input()
 arr1 = [x for x in arr.split(' ')]
-print(arr1)
+final_arr = []
+y=0
+for i in arr1:
+    x = int(i)
+    if x > y:
+        final_arr.clear()
+        final_arr.append(x)
+        y = x
+    elif (x==y):
+        final_arr.append(x)
+
+print(final_arr.__len__())
