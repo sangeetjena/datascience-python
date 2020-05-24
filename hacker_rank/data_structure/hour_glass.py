@@ -1,3 +1,12 @@
+"""
+in python two dimention array don't work as math mathematics array
+it arr[i][j] : her i indicate 1st array ,2nd array ..
+where j indicate position of value in the array.
+
+but in mathematics i indicate x axis and y indicate y axis.
+
+"""
+
 arr = [[1,1, 1, 0, 0, 0],
            [0, 1, 0, 0, 0, 0],
             [1, 1, 1, 0, 0, 0],
