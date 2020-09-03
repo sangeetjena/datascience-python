@@ -9,10 +9,13 @@ def get_credential(auth_type,target):
     #'/path/to/svc_account.json')
     if (auth_type=='default'):
         cedential,project =  google.auth.default()
-        return [cedential,project]
+        scoped_credentials = cedential.with_scopes(
+            [ 'https://www.googleapis.com/auth/compute' ,
+              'https://www.googleapis.com/auth/devstorage.read_write'])
+        return [scoped_credentials,project]
 
     if( auth_type=='servicefile'):
-        credential = source_credentials = service_account.Credentials.from_service_account_file( 'D:/Learning/GCP/key/admin.json')
+        credential=service_account.Credentials.from_service_account_file( 'D:/Learning/GCP/key/admin.json')
 
     if (auth_type=='impersonate'):
         source_credentials, project = google.auth.default()
@@ -22,5 +25,5 @@ def get_credential(auth_type,target):
             target_scopes='https://www.googleapis.com/auth/compute',
             lifetime=500)
         return target_credentials
-    
+
 
