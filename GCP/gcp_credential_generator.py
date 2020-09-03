@@ -22,4 +22,5 @@ def get_credential(auth_type,target):
             target_scopes='https://www.googleapis.com/auth/compute',
             lifetime=500)
         return target_credentials
+    
 
