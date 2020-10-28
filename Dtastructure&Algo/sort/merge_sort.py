@@ -1,3 +1,7 @@
+#logic behind is that it will keep deviding all the elements and up to reach the single elements
+# the n keep forming sorted arrays and merge two to create one sorted array and that again
+#sorted with others left.
+
 def merge_sort(value):
     if len(value)>1:
         mid= len(value)//2
