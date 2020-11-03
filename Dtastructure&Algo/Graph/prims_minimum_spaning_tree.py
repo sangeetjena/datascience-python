@@ -26,7 +26,7 @@ def prims(graph):
                 vertex[i]=graph[min_v][i]
                 parent[i]=min_v
     print(travelled)
-    print(vertex) 
+    print(vertex)
     return parent
 graph = [ [0, 2, 0, 6, 0],
             [2, 0, 3, 8, 5],
